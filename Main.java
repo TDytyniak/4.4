@@ -13,11 +13,21 @@ import java.util.Scanner;
 class Main {
   public static void main(String[] argst) {
     Scanner imie=new Scanner(System.in);
+    Scanner wyb=new Scanner(System.in);
     Scanner wiek=new Scanner(System.in);
-    System.out.println("Podaj imię:");
+    System.out.println("Wybierz opcje\n 0.Zamknij program\n 1. Dodaj studenta.\n:");
+    int wy=wyb.nextInt();
+    switch(wy)
+      {
+        case 0:
+          System.exit(0);
+          break;
+        case 1:
+          System.out.println("Podaj imie:");
     String i=imie.nextLine();
     System.out.println("Podaj wiek:");
-    int w=wiek.nextInt();
+      int w=wiek.nextInt();
+          
     try {
       Service s = new Service();
       s.addStudent(new Student(i,w));
@@ -28,7 +38,9 @@ class Main {
         System.out.println(current.ToString());
       }
     } catch (IOException e) {
-
+      
+    }
+          
     }
   }
 }

@@ -15,7 +15,7 @@ class Main {
     Scanner imie=new Scanner(System.in);
     Scanner wyb=new Scanner(System.in);
     Scanner wiek=new Scanner(System.in);
-    System.out.println("Wybierz opcje\n 0.Zamknij program\n 1. Dodaj studenta.\n:");
+    System.out.println("Wybierz opcje\n 0.Zamknij program\n 1. Dodaj studenta.\n 2. Dodaj studenta.\n");
     int wy=wyb.nextInt();
     switch(wy)
       {
@@ -33,14 +33,25 @@ class Main {
       s.addStudent(new Student(i,w));
      
 
-      var students = s.getStudents();
+      
+     break;} 
+      catch (IOException e){}
+    case 2:    Service s = new Service();  
+     try {
+     
+     s.addStudent(new Student(i,w));
+     var students = s.getStudents();
+       int w=wiek.nextInt();
       for(Student current : students) {
-        System.out.println(current.ToString());
+        System.out.println(current.ToString()); 
+       
       }
     } catch (IOException e) {
       
     }
-          
+        
     }
-  }
+}
+      
+  
 }

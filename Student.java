@@ -1,3 +1,9 @@
+import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.I0Exception;
+
+
+
 public class Student {
 
 
@@ -5,17 +11,19 @@ public class Student {
 
 private String Name;
   private int Age;
-
-  public Student(String name, int age) {
+private String Surname;
+  public Student(String name, int age,String surname) {
     Name = name;
     Age = age;
+    Surname = surname;
   }
 
   public String GetName() {return Name;}
+  public String GetSurname() {return Surname;}
   public int GetAge() {return Age;}
 
   public String ToString() {
-    return Name + " " + Integer.toString(Age);
+    return Name + " " + Surname + " " + Integer.toString(Age);
   }
 
   public static Student Parse(String str) {

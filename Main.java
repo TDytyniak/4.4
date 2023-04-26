@@ -19,6 +19,7 @@ class Main {
      Scanner wiek=new Scanner(System.in);
     Scanner wyb=new Scanner(System.in);
     Scanner nazwisko=new Scanner(System.in);
+    Scanner adres=new Scanner(System.in);
     System.out.println("Wybierz opcje\n 0.Zamknij program\n 1. Dodaj studenta.\n 2. Dodaj studenta.\n");
     int wy=wyb.nextInt();
     switch(wy)
@@ -32,9 +33,11 @@ class Main {
     System.out.println("Podaj nazwisko:");
     String n=nazwisko.nextLine();
     System.out.println("Podaj wiek:");
-      int w=wiek.nextInt();
+    int w=wiek.nextInt();
+    System.out.println("Podaj adres:");
+    String a=adres.nextLine();
           
-           s.addStudent(new Student(i,n,w));
+           s.addStudent(new Student(i,n,w,a));
            break;
     
     case 2:    
